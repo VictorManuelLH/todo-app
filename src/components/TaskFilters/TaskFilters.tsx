@@ -16,14 +16,7 @@ export function TaskFilters({ value, onChange }: TaskFiltersProps) {
   return (
     <div className={s.filters} role="tablist" aria-label="Filtrar tareas">
       {OPTIONS.map((opt) => (
-        <button
-          key={opt.value}
-          type="button"
-          role="tab"
-          aria-selected={value === opt.value}
-          className={`${s.tab} ${value === opt.value ? s.active : ''}`}
-          onClick={() => onChange(opt.value)}
-        >
+        <button key={opt.value} type="button" role="tab" aria-selected={value === opt.value} className={`${s.tab} ${value === opt.value ? s.active : ''}`} onClick={() => onChange(opt.value)}>
           {opt.label}
         </button>
       ))}

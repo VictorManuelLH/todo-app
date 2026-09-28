@@ -17,13 +17,7 @@ export function TaskForm({ onAdd }: TaskFormProps) {
 
   return (
     <form className={s.form} onSubmit={handleSubmit}>
-      <input
-        className={s.input}
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-        placeholder="Nueva tarea..."
-        aria-label="Nueva tarea"
-      />
+      <input className={s.input} value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Nueva tarea..." aria-label="Nueva tarea"/>
       <button type="submit" className={s.button} disabled={!title.trim()}>
         Agregar
       </button>
