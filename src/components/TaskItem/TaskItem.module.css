@@ -1,0 +1,72 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--color-surface);
+}
+
+.item + .item {
+  border-top: 1px solid var(--color-border);
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  overflow-wrap: anywhere;
+}
+
+.completed .title {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.action {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.toggle {
+  color: var(--color-success);
+}
+
+.toggle:hover {
+  background: var(--color-success-soft);
+  border-color: var(--color-success);
+}
+
+.delete {
+  color: var(--color-danger);
+}
+
+.delete:hover {
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger);
+}
